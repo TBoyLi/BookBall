@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Me from '../Components/Me';
 
-class MeContainer extends React.Component {
+export default class MeContainer extends React.Component {
 
     render() {
         return (
@@ -11,9 +11,9 @@ class MeContainer extends React.Component {
     }
 }
 
-export default connect((state) => {
-    const {MeContainer} = state;
-    return {
-        MeReducer
-    }
-})(MeContainer);
+// export default connect((state) => {
+//     const {MeContainer} = state;
+//     return {
+//         MeReducer
+//     }
+// })(MeContainer);

@@ -34,7 +34,7 @@ export default class More extends Component {
 	componentDidMount(){
 
 	}
-});
+}
 
 const styles = StyleSheet.create({
     container: {

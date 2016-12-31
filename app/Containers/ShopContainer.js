@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Shop from '../Components/Shop';
 
-class ShopContainer extends React.Component {
+export default class ShopContainer extends React.Component {
 
     render() {
         return (
@@ -11,9 +11,9 @@ class ShopContainer extends React.Component {
     }
 }
 
-export default connect((state) => {
-    const {ShopContainer} = state;
-    return {
-        ShopReducer
-    }
-})(ShopContainer);
+// export default connect((state) => {
+//     const {ShopContainer} = state;
+//     return {
+//         ShopReducer
+//     }
+// })(ShopContainer);

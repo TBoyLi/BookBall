@@ -11,8 +11,8 @@ import {
   Platform
 } from 'react-native';
 
-import Splash from './page/Splash';
-import * as ToastUtil from './utils/ToastUtil';
+import Splash from './Components/Splash';
+import * as ToastUtil from './Utils/ToastUtil';
 
 export const ABOVE_LOLIPOP = Platform.Version && Platform.Version > 19
 var _navigator;
