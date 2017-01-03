@@ -10,6 +10,8 @@ import {
 	Platform
 } from 'react-native';
 
+import SwiperByScrollView from './CustomComponents/SwiperByScrollView';
+
 var {height, width} = Dimensions.get('window');
 
 export default class Home extends Component {
@@ -24,9 +26,7 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>
-                    首页
-                </Text>
+                <SwiperByScrollView/>
             </View>
         )
     }

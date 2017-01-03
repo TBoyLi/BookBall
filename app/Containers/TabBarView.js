@@ -4,7 +4,8 @@ import {
     Text,
     Image,
     Platform,
-    Dimensions
+    Dimensions,
+    StyleSheet
 } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
@@ -19,29 +20,31 @@ import MeContainer from './MeContainer';
 import MoreContainer from './MoreContainer';
 
 const {width, height} = Dimensions.get('window');
+
 const tabBarItems = [
     {
         title: '首页',
-        icon: () => { <Image source={require('../Imgs/main.png')}/> },
-        selectedIcon: ()=>{<Image source={require('../Imgs/main_act.png')}/>},
+        icon: () => <Image style={styles.iconStyle}  source={require('../Imgs/tab1.png')}/>,
+        selectedIcon: () => <Image style={styles.iconStyle}  source={require('../Imgs/tab1act.png')}/>,
         component: HomeContainer
     }, {
         title: '店铺',
-        icon: () => { <Image source={require('../Imgs/main.png')}/> },
-        selectedIcon: ()=>{<Image source={require('../Imgs/main_act.png')}/>},
+        icon: () => <Image style={styles.iconStyle}  source={require('../Imgs/tab2.png')}/>,
+        selectedIcon: () => <Image style={styles.iconStyle}  source={require('../Imgs/tab2act.png')}/>,
         component: ShopContainer
     }, {
         title: '我的',
-        icon: () => { <Image source={require('../Imgs/main.png')}/> },
-        selectedIcon: ()=>{<Image source={require('../Imgs/main_act.png')}/>},
+        icon: () => <Image style={styles.iconStyle} source={require('../Imgs/tab3.png')}/>,
+        selectedIcon: () => <Image style={styles.iconStyle} source={require('../Imgs/tab3act.png')}/>,
         component: MeContainer
     }, {
         title: '更多',
-        icon: () => { <Image source={require('../Imgs/main.png')}/> },
-        selectedIcon: ()=>{<Image source={require('../Imgs/main_act.png')}/>},
+        icon: () => <Image style={styles.iconStyle}  source={require('../Imgs/tab4.png')}/>,
+        selectedIcon: () => <Image style={styles.iconStyle}  source={require('../Imgs/tab4act.png')}/>,
         component: MoreContainer
     }
 ];
+
 
 export default class TarBarView extends Component {
     constructor(props) {
@@ -63,8 +66,8 @@ export default class TarBarView extends Component {
                                 key= {i}
                                 selected={this.state.selectedTab === controller.title}
                                 title={controller.title}
-                                renderIcon={() => <Image source={require('../Imgs/main.png')} />}
-                                renderSelectedIcon={() => <Image source={require('../Imgs/main_act.png')} />}
+                                renderIcon={controller.icon}
+                                renderSelectedIcon={controller.selectedIcon}
                                 onPress={() => this.setState({ selectedTab: controller.title }) }>
 
                                 <Component navigator = {this.props.navigator} {...this.props}/>
@@ -76,3 +79,10 @@ export default class TarBarView extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    iconStyle:{
+        width: Platform.OS === 'ios' ? 30 : 25,
+        height:Platform.OS === 'ios' ? 30 : 25
+    }
+});
