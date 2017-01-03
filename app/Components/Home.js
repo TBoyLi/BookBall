@@ -10,7 +10,7 @@ import {
 	Platform
 } from 'react-native';
 
-import SwiperByScrollView from './CustomComponents/SwiperByScrollView';
+import SwiperView from './CustomComponents/SwiperView';
 
 var {height, width} = Dimensions.get('window');
 
@@ -25,9 +25,11 @@ export default class Home extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <SwiperByScrollView/>
-            </View>
+            <ScrollView showsVerticalScrollIndicator={false}>
+             style={styles.container}>
+                <SwiperView/>
+
+            </ScrollView>
         )
     }
 

@@ -23,13 +23,15 @@ var ImageData = [
     require('../../Imgs/swiper6.jpg')
 ];
 
-var SwiperByScrollView = React.createClass({
+var SwiperView = React.createClass({
 
     //注册定时器
     mixins: [TimerMixin],
 
     getDefaultProps() {
-        return {duration: 2000}
+        return {
+            duration: 2000
+        }
     },
 
     getInitialState() {
