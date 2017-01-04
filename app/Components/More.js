@@ -10,6 +10,8 @@ import {
 	Platform
 } from 'react-native';
 
+import HeadView from './CustomComponents/HeadView';
+
 var {height, width} = Dimensions.get('window');
 
 export default class More extends Component {
@@ -24,9 +26,7 @@ export default class More extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>
-                    更多
-                </Text>
+                <HeadView centerTitle='更多' isRight={false}/>
             </View>
         )
     }

@@ -10,7 +10,8 @@ import {
 	Platform
 } from 'react-native';
 
-import GridView from './CustomComponents/GridView';
+import HeadView from './CustomComponents/HeadView';
+
 var {height, width} = Dimensions.get('window');
 
 export default class Me extends Component {
@@ -25,10 +26,7 @@ export default class Me extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>
-                    我的
-                </Text>
-                <GridView/>
+                <HeadView centerTitle='我的' isRight={false}/>
             </View>
         )
     }

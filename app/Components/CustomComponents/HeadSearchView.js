@@ -64,17 +64,16 @@ export default class HeadSearchView extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        height:(Platform.OS === 'ios') ? 45 : 45,
+        height: Platform.OS === 'ios' ? 48 : 48,
         backgroundColor:'#1FB7F5',
-        flexDirection:'row',
+        flexDirection:'row'
     },
     left:{
         flex:1,
         flexDirection:'row',
         // backgroundColor:'blue',
         justifyContent:'center',
-        alignItems:'center',
-
+        alignItems:'center'
     },
     center:{
         flex:2,

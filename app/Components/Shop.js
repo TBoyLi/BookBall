@@ -10,6 +10,8 @@ import {
 	Platform
 } from 'react-native';
 
+import HeadView from './CustomComponents/HeadView';
+
 var {height, width} = Dimensions.get('window');
 
 export default class Shop extends Component {
@@ -24,9 +26,7 @@ export default class Shop extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>
-                    店铺
-                </Text>
+                <HeadView centerTitle='店铺' isRight={true} rightImage={require('../Imgs/search.png')}/>
             </View>
         )
     }
