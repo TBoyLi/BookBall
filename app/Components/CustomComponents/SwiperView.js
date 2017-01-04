@@ -77,8 +77,8 @@ var SwiperView = React.createClass({
         for (var i = 0; i < ImageData.length; i++) {
             allImage.push(<Image key={i} source={ImageData[i]} style={{
                 width: width,
-                height: 150
-            }}/>);
+                height: 200
+            }} resizeMode='stretch'/>);
         }
         return allImage;
     },
@@ -179,4 +179,4 @@ const styles = StyleSheet.create({
     }
 });
 
-module.exports = SwiperByScrollView;
+module.exports = SwiperView;

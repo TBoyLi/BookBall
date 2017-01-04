@@ -10,6 +10,7 @@ import {
 	Platform
 } from 'react-native';
 
+import GridView from './CustomComponents/GridView';
 var {height, width} = Dimensions.get('window');
 
 export default class Me extends Component {
@@ -27,6 +28,7 @@ export default class Me extends Component {
                 <Text>
                     我的
                 </Text>
+                <GridView/>
             </View>
         )
     }
