@@ -11,6 +11,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import HeadSearchView from './CustomComponents/HeadSearchView';
 import SwiperView from './CustomComponents/SwiperView';
 import GridView from './CustomComponents/GridView';
 
@@ -28,6 +29,8 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <HeadSearchView/>
+
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <SwiperView/>
 
