@@ -137,7 +137,7 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         marginTop: (Platform.OS === 'ios') ? 20 : 0,
-        backgroundColor:'#f0f0f0'
+        backgroundColor:'#F0F0F0'
     },
     table1_image:{
         width:width,

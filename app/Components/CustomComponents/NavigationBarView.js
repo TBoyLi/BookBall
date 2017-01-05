@@ -10,12 +10,9 @@ import {
 	Platform
 } from 'react-native';
 
-import HeadView from './CustomComponents/HeadView';
-import ItemMenuView from './CustomComponents/ItemMenuView';
-
 var {height, width} = Dimensions.get('window');
 
-export default class Me extends Component {
+export default class NavigationBarView extends Component {
 
     constructor(props) {
         super(props);
@@ -27,8 +24,7 @@ export default class Me extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <HeadView centerTitle='我的' isRight={false}/>
-                <ItemMenuView/>
+                
             </View>
         )
     }
